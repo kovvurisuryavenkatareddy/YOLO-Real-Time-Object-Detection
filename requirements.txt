@@ -1,5 +1,21 @@
-numpy==1.24.2
+numpy==1.26.4 
+# A library for numerical computing, providing support for large multi-dimensional arrays and 
+# mathematical functions.
+
 torch==2.0.1
+# PyTorch, an open-source deep learning framework for building and training neural networks.
+
 torchvision==0.15.2
+# A PyTorch extension for image processing, including datasets, model architectures, and transformations.
+
 ultralytics==8.0.32
-supervision==0.9.0  
+# A Python package for YOLO (You Only Look Once) object detection models, including YOLOv8.
+
+supervision==0.9.0
+# A utility package for visualizing and processing object detection and tracking results.
+
+opencv-python==4.11.0.86
+# OpenCV library for real-time computer vision tasks like image and video processing.
+
+argparse==1.4.0
+# (Unnecessary) Built-in module for handling command-line arguments in Python.

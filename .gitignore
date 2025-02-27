@@ -1,2 +1,6 @@
 myenv/
 yolov8l.pt
+runs/
+yolo11x.pt
+yolov8n.pt
+frontend/node_modules/

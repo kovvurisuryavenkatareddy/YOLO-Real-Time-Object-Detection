@@ -1,0 +1,195 @@
+/* Basic CSS for CameraCapture Component */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light grey background */
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Dark grey text */
+  }
+  
+  .controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items in the column */
+    gap: 15px; /* Spacing between items */
+    margin-top: 20px;
+  }
+  
+  .video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Space below video section */
+  }
+  
+  .video-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #ccc; /* Light grey border */
+    border-radius: 8px;
+    background-color: #ddd; /* Very light grey background for video container */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    overflow: hidden; /* Ensure video stays within container */
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px; /* Match container border radius */
+    object-fit: cover; /* Cover container, might crop video */
+  }
+  
+  .camera-off-text {
+    position: absolute;
+    color: #777; /* Medium grey for "Camera Off" text */
+    font-size: 1.2em;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 10px; /* Spacing between buttons horizontally */
+    margin-bottom: 15px; /* Space below button group */
+  }
+  
+  button,
+  .file-input {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button {
+    background-color: #5cb85c; /* Green button background */
+  }
+  
+  button:hover {
+    background-color: #4cae4c; /* Darker green on hover */
+  }
+  
+  button:disabled {
+    background-color: #ccc; /* Greyed out for disabled buttons */
+    cursor: not-allowed;
+  }
+  
+  /* Specific button colors */
+  button.open-camera {
+    background-color: #5cb85c; /* Green */
+  }
+  button.open-camera:hover {
+    background-color: #4cae4c;
+  }
+  
+  button.capture-image {
+    background-color: #428bca; /* Blue */
+  }
+  button.capture-image:hover {
+    background-color: #3071a9;
+  }
+  
+  button.detect-objects {
+    background-color: #f0ad4e; /* Yellow/Orange */
+    color: #333; /* Dark text for contrast on yellow */
+  }
+  button.detect-objects:hover {
+    background-color: #eea236;
+  }
+  
+  button.turn-off-camera {
+    background-color: #d9534f; /* Red */
+  }
+  button.turn-off-camera:hover {
+    background-color: #c9302c;
+  }
+  
+  
+  .file-input {
+    background-color: #eee; /* Light grey for file input area */
+    color: #555; /* Dark grey text for file input */
+    padding: 8px; /* Slightly less padding to visually align with buttons */
+    text-align: center; /* Center the file input text if needed */
+    cursor: pointer; /* Indicate it's interactive */
+  }
+  
+  .file-input::-webkit-file-upload-button {
+    background-color: #ddd; /* Lighter grey for the file button part */
+    border: none;
+    color: #555;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  
+  .preview-section,
+  .processed-section {
+    margin-top: 20px;
+    text-align: center; /* Center the content within these sections */
+  }
+  
+  .preview-section h3,
+  .processed-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .preview-image,
+  .processed-image {
+    max-width: 300px; /* Limit image width */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for images */
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .object-count {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  /* Responsive adjustments (optional basic example) */
+  @media (max-width: 768px) {
+    .video-container,
+    .preview-image,
+    .processed-image {
+      max-width: 100%; /* Make video and images responsive on smaller screens */
+      height: auto; /* Adjust height automatically */
+    }
+    .controls {
+      flex-direction: column; /* Stack buttons on smaller screens */
+      align-items: stretch; /* Make buttons full width */
+    }
+    .controls button {
+      width: 100%; /* Full width buttons on small screens when stacked */
+      margin-bottom: 5px; /* Add a bit of space between stacked buttons */
+    }
+    .file-input {
+      width: calc(100% - 20px); /* Adjust width for file input to fit screen */
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+  
+    .container {
+      padding: 10px; /* Reduce container padding on smaller screens */
+    }
+  }

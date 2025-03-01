@@ -1,0 +1,97 @@
+/* Basic CSS for LiveStream Component */
+
+.live-stream-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1a202c; /* Dark background, similar to gray-900 in Tailwind */
+    color: #fff; /* White text */
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  
+  .live-stream-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .camera-toggle-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  .camera-toggle-button:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow becomes more prominent on hover */
+  }
+  
+  /* Button states */
+  .camera-start {
+    background-color: #48bb78; /* Green for "Start Camera" */
+  }
+  
+  .camera-start:hover {
+    background-color: #3ea86a; /* Darker green on hover */
+  }
+  
+  .camera-stop {
+    background-color: #e53e3e; /* Red for "Stop Camera" */
+  }
+  
+  .camera-stop:hover {
+    background-color: #c63232; /* Darker red on hover */
+  }
+  
+  .video-feed-container {
+    margin-top: 25px;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #4a5568; /* Border similar to gray-700 in Tailwind */
+    border-radius: 10px;
+    background-color: #2d3748; /* Background similar to gray-800 in Tailwind */
+    overflow: hidden; /* To ensure rounded corners are visible for video/text */
+  }
+  
+  .video-feed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container, potentially cropping the video */
+    border-radius: 10px; /* Match container border radius */
+  }
+  
+  .camera-off-message {
+    color: #a0aec0; /* Text color similar to gray-400 in Tailwind */
+    font-size: 1.2em;
+  }
+  
+  
+  /* Responsive adjustments (optional basic example) */
+  @media (max-width: 768px) {
+    .video-feed-container {
+      width: 95%; /* Make video container responsive to screen width */
+      max-width: 600px; /* But do not exceed 600px on very large mobile devices/tablets */
+      height: auto; /* Adjust height automatically based on width */
+      aspect-ratio: 600 / 400; /* Maintain 600:400 aspect ratio */
+    }
+  
+    .live-stream-title {
+      font-size: 2em; /* Slightly smaller title on mobile */
+    }
+  
+    .camera-toggle-button {
+      font-size: 1em; /* Slightly smaller button text on mobile */
+      padding: 10px 20px; /* Adjust button padding */
+    }
+  }
